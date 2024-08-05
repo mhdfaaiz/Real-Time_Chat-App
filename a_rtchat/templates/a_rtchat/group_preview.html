@@ -1,0 +1,17 @@
+<!-- group_preview.html -->
+{% extends 'layouts/box.html' %}
+
+{% block content %}
+<h1>"{{ chat_group.groupchat_name }}"</h1>
+<h2>Members</h2>
+<ul>
+    {% for member in chat_group.members.all %}
+    <li>{{ member.username }}<img src="{{ member.profile.avatar }}" class="w-14 h-14 rounded-full object-cover"/>
+    </li>
+    {% endfor %}
+</ul>
+<form method="post">
+    {% csrf_token %}
+    <button style="margin-top : 10px; background: green;" type="submit">Join Group</button>
+</form>
+{% endblock %}
