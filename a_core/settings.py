@@ -36,10 +36,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if ENVIRONMENT == 'development':
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'chaton-k2w0.onrender.com']
 
