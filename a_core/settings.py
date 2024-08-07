@@ -19,7 +19,7 @@ env = Env()
 Env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default="production")
-#ENVIRONMENT = "production"
+ENVIRONMENT = "production"
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
